@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: brown;
+    height: 8vh;
+    width: 96vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+
+#logo {
+    width: 10vh;
+    height:max-content;
+}
+
+#h-logo-container, #h-actions-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    align-items: center;
+}
+
+#h-logo-container > h1 {
+    font-size: 5vw;
+}
+
+.h-action-btn {
+    padding: 1vh 2vh;
+    border-radius: 10vh;
+    border: none;
+    font-size: 3vh;
+}
