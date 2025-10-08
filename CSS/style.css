@@ -20,7 +20,7 @@ header {
 
 
 #logo {
-    width: 10vh;
+    width: 5vh;
     height:max-content;
 }
 
@@ -36,8 +36,8 @@ header {
 }
 
 .h-action-btn {
-    padding: 1vh 2vh;
+    padding: 1vw 1vh;
     border-radius: 10vh;
     border: none;
-    font-size: 3vh;
+    font-size: 2vh;
 }
