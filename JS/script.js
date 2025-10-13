@@ -72,3 +72,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+async function initCameraList() {
+  try {
+    // Força o pedido de permissão antes de listar câmeras
+    await navigator.mediaDevices.getUserMedia({ video: true });
+    const devices = await Html5Qrcode.getCameras();
+
+    if (devices && devices.length) {
+      devices.forEach((device) => {
+        const option = document.createElement("option");
+        option.value = device.id;
+        option.text = device.label || `Câmera ${cameraSelect.length + 1}`;
+        cameraSelect.appendChild(option);
+      });
+    } else {
+      resultElement.textContent = "Nenhuma câmera encontrada 😕";
+    }
+  } catch (err) {
+    console.error("Erro ao acessar câmera:", err);
+    resultElement.textContent = "Permissão negada ou erro ao acessar a câmera.";
+  }
+}
+
+// Chame isso dentro do DOMContentLoaded
+initCameraList();
