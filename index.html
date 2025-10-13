@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="CSS/style.css">
   <script src="https://unpkg.com/html5-qrcode"></script>
   <script defer src="JS/script.js"></script>
+
+    <style>
+
+    #reader {
+      width: 300px;
+      margin-top: 10px;
+    }
+    select, button {
+      padding: 8px 12px;
+      font-size: 1em;
+    }
+    #result {
+      font-size: 1.2em;
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
     <header>
@@ -21,7 +38,15 @@
             <button class="h-action-btn">4</button>
         </div>
     </header>
-    <h1>Leitor de QR Code 3</h1>
+    <h1>Leitor de QR Code</h1>
+
+    <div>
+        <label for="cameraSelect">Escolha a câmera:</label>
+        <select id="cameraSelect"></select>
+        <button id="startBtn">Iniciar</button>
+        <button id="stopBtn" disabled>Parar</button>
+    </div>
+
     <div id="reader"></div>
     <p id="result">Aguardando leitura...</p>
 </body>
