@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((devices) => {
       if (devices && devices.length) {
         // Pega a primeira câmera disponível
-        const cameraId = devices[0].id;
+        const cameraId = devices[1].id;
 
         html5QrCode.start(
           cameraId,
